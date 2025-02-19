@@ -68,7 +68,7 @@ Convert(number)
 }
 ```
 Este exemplo exibirá o **tempo de atividade do computador do jogador** quando ele entrar no servidor.
-
+---
 ### **Tipo nº 70**  
 Este tipo **lê dados da estrutura CBaseModelInfoSA** de um modelo específico e retorna um **checksum em bytes**. É possível especificar **de qual deslocamento (offset) começar a leitura** e **quantos bytes ler**.  
 
@@ -100,6 +100,7 @@ public OnClientCheckResponse(playerid, type, arg, response)
         return 1;
 }
 ```
+---
 ### **Tipo nº 71**  
 Este tipo **lê dados da estrutura CColModelSA** de um modelo específico (**cujo ponteiro está localizado no deslocamento 20 da estrutura CBaseModelInfoSA**). O restante funciona de maneira semelhante ao tipo anterior.  
 
@@ -125,7 +126,7 @@ public OnClientCheckResponse(playerid, type, arg, response)
         return 1;
 }
 ```
-
+---
 ### **Tipo nº 2**  
 Agora estamos chegando às partes interessantes. Esse tipo retorna **32 flags da estrutura CPhysicalSA**.  
 - **Se o jogador estiver em um veículo**, retorna informações sobre o veículo.  
@@ -143,7 +144,7 @@ Os tipos abaixo funcionam **somente nas versões do cliente**:
 - **0.3.7-R2**  
 - **0.3.7-R3**  
 - **0.3.DL-R1**  
-
+---
 ### **Tipo nº 5**  
 Esse tipo gera um **checksum de `size` bytes** a partir do endereço **`arg + offset`** (memória do GTA) e retorna no argumento **response**.  
 
@@ -151,7 +152,7 @@ Esse tipo gera um **checksum de `size` bytes** a partir do endereço **`arg + of
 ✅ **Offsets válidos:** `0 - 255`  
 
 Este é um dos tipos **mais interessantes e úteis**, pois pode ser usado para verificar se a **memória foi modificada** por algum **cheat/hack**.  
-
+---
 ### **Tipo nº 69**  
 Esse tipo gera um **checksum de `size` bytes** a partir do endereço **`arg + offset`** (memória do SAMP) e retorna no argumento **response**.  
 
